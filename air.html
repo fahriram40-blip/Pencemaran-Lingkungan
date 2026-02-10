@@ -4,48 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pencemaran Air</title>
+
     <style>
         body {
             margin: 0;
-            padding: 0;
+            padding: 40px 0;
             min-height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
                         url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
             background-size: cover;
             background-position: center;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
         }
 
-        /* 🔥 ANIMASI UTAMA */
-        @keyframes popIn {
-            0% {
-                opacity: 0;
-                transform: scale(0.6) translateY(80px);
-                filter: blur(12px);
-            }
-            60% {
-                opacity: 1;
-                transform: scale(1.05) translateY(-10px);
-                filter: blur(0);
-            }
-            100% {
-                transform: scale(1) translateY(0);
-            }
+        .wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .header-info {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #e0e0e0;
         }
 
         .box {
@@ -53,54 +41,110 @@
             backdrop-filter: blur(10px);
             padding: 40px;
             border-radius: 20px;
-            max-width: 600px;
+            max-width: 650px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
             text-align: center;
-
-            animation: popIn 1.3s cubic-bezier(.25,.8,.25,1);
         }
 
         h1 {
             border-bottom: 2px solid #2196f3;
             padding-bottom: 10px;
+        }
 
-            animation: fadeUp 0.8s ease 0.4s both;
+        h2 {
+            text-align: left;
+            margin-top: 30px;
+            color: #64b5f6;
         }
 
         p {
-            animation: fadeUp 0.8s ease 0.7s both;
+            line-height: 1.7;
+            text-align: justify;
+            font-size: 14.5px;
+        }
+
+        .news-img {
+            width: 100%;
+            border-radius: 15px;
+            margin: 25px 0 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.6);
         }
 
         a {
             display: inline-block;
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 12px 28px;
             border: 2px solid #2196f3;
             color: white;
             text-decoration: none;
             border-radius: 30px;
-            transition: all 0.3s ease;
-
-            animation: fadeUp 0.8s ease 1s both;
+            transition: all 0.4s ease;
         }
 
         a:hover {
-            background: #2196f3;
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(33,150,243,0.6);
+            box-shadow: 0 0 20px rgba(33,150,243,0.9);
+            transform: translateY(-3px);
         }
     </style>
 </head>
+
 <body>
 
-<div class="box">
-    <h1>Pencemaran Air</h1>
-    <p>
-        Pencemaran air adalah kondisi di mana air tercemar oleh zat berbahaya
-        seperti limbah rumah tangga, limbah industri, dan sampah
-        yang menurunkan kualitas air.
-    </p>
+<div class="wrapper">
 
-    <a href="index.html">⬅ Kembali ke Menu</a>
+    <!-- IDENTITAS -->
+    <div class="header-info">
+        <strong>Nama :</strong> Fahry Ramadhani<br>
+        <strong>Lokasi Pengamatan :</strong> Bogor<br>
+        <strong>Tanggal Penulisan :</strong> 10-02-2026
+    </div>
+
+    <!-- BOX KONTEN -->
+    <div class="box">
+        <h1>Pencemaran Air</h1>
+
+        <!-- ARTIKEL -->
+        <h2>Pendahuluan</h2>
+        <p>
+            Air merupakan sumber daya alam yang sangat penting bagi kehidupan manusia dan makhluk hidup lainnya.
+            Di wilayah Bogor, air digunakan untuk kebutuhan sehari-hari seperti minum, mandi, mencuci, dan pertanian.
+            Namun, saat ini kualitas air di beberapa wilayah Bogor mengalami penurunan akibat pencemaran yang berasal
+            dari limbah rumah tangga, industri, dan aktivitas manusia lainnya.
+        </p>
+
+        <h2>Pembahasan</h2>
+        <p>
+            Pencemaran air di Bogor banyak disebabkan oleh pembuangan limbah industri dan medis yang tidak dikelola
+            dengan baik. Selain itu, limbah rumah tangga seperti deterjen, sampah plastik, dan sisa makanan juga
+            berkontribusi mencemari sungai dan saluran air. Kurangnya kesadaran masyarakat serta lemahnya pengawasan
+            menjadi faktor utama terjadinya pencemaran air.
+        </p>
+
+        <!-- FOTO DIPINDAHKAN KE SINI -->
+        <img src="c:\Users\fahry\Downloads\pabrik-pengolahan-limbas-medis-di-bogor-disegel-usai-cemari-air-warga-dok-dlh-bogor-1767933019548_169.jpeg"
+             alt="Pabrik pengolahan limbah medis di Bogor disegel"
+             class="news-img">
+
+        <h2>Dampak Pencemaran Air</h2>
+        <p>
+            Dampak pencemaran air sangat dirasakan oleh masyarakat sekitar. Air yang tercemar dapat menyebabkan
+            berbagai penyakit seperti diare, gatal-gatal, dan gangguan pencernaan. Selain itu, pencemaran air juga
+            merusak ekosistem perairan, membunuh ikan, dan menurunkan kualitas lingkungan hidup.
+        </p>
+
+        <h2>Solusi</h2>
+        <p>
+            Upaya yang dapat dilakukan untuk mengatasi pencemaran air antara lain dengan meningkatkan pengelolaan
+            limbah industri dan rumah tangga, melakukan pengawasan yang ketat terhadap pembuangan limbah, serta
+            meningkatkan kesadaran masyarakat untuk menjaga kebersihan lingkungan. Pemerintah dan masyarakat harus
+            bekerja sama agar kualitas air di Bogor dapat kembali bersih dan layak digunakan.
+        </p>
+
+        <a href="index.html">⬅ Kembali ke Menu</a>
+    </div>
+
 </div>
 
 </body>
