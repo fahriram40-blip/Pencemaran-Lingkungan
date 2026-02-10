@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Pencemaran Lingkungan</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Latar Belakang dengan Gambar Alam */
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px); /* Efek kaca kekinian */
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 320px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #437ede;
+            padding-bottom: 10px;
+        }
+
+        .menu-link {
+            display: block;
+            margin: 15px 0;
+            padding: 15px;
+            background-color: transparent;
+            color: white;
+            text-decoration: none;
+            border: 2px solid #437ede;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efek Hover */
+        .menu-link:hover {
+            background-color: #437ede;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(67, 126, 222, 0.4);
+        }
+
+        .description {
+            font-size: 0.8rem;
+            margin-top: 20px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Jenis Pencemaran</h1>
+
+     <a href="air.html" class="menu-link">Pencemaran Air</a>
+     <a href="tanah.html" class="menu-link">Pencemaran Tanah</a>
+     <a href="udara.html" class="menu-link">Pencemaran Udara</a>
+
+        <p class="description">Pilih topik untuk mempelajari lebih lanjut tentang pelestarian bumi kita.</p>
+    </div>
+
+</body>
+</html>

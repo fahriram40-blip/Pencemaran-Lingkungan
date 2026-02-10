@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pencemaran Tanah</title>
+
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+               url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+/* ANIMASI */
+@keyframes popIn{
+    0%{opacity:0;transform:scale(.6) translateY(80px);filter:blur(12px)}
+    60%{opacity:1;transform:scale(1.05) translateY(-10px);filter:blur(0)}
+    100%{transform:scale(1) translateY(0)}
+}
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(25px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+.box{
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:20px;
+    max-width:600px;
+    text-align:center;
+    animation:popIn 1.3s cubic-bezier(.25,.8,.25,1);
+}
+
+h1{
+    border-bottom:2px solid #8bc34a;
+    padding-bottom:10px;
+    animation:fadeUp .8s ease .4s both;
+}
+
+p{animation:fadeUp .8s ease .7s both}
+
+a{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    border:2px solid #8bc34a;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+    animation:fadeUp .8s ease 1s both;
+}
+a:hover{
+    background:#8bc34a;
+    transform:scale(1.1);
+    box-shadow:0 0 20px rgba(139,195,74,.6);
+}
+</style>
+</head>
+
+<body>
+<div class="box">
+    <h1>Pencemaran Tanah</h1>
+    <p>
+        Pencemaran tanah adalah masuknya zat berbahaya seperti limbah,
+        sampah plastik, dan bahan kimia ke dalam tanah sehingga
+        menurunkan kesuburan dan membahayakan makhluk hidup.
+    </p>
+
+    <a href="index.html">⬅ Kembali ke Menu</a>
+</div>
+</body>
+</html>
